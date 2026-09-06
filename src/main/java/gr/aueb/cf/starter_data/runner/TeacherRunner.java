@@ -28,15 +28,15 @@ public class TeacherRunner implements CommandLineRunner {
         teacherRepository.save(teacher1);        // κανει insert ή update αναλογα αν υπαρχει η οχι
 
         Teacher teacher2 = new Teacher();
-        teacher1.setFirstname("Alice");
-        teacher1.setLastname("Ioannou");
-        teacher1.setActive(true);
+        teacher2.setFirstname("Alice");
+        teacher2.setLastname("Ioannou");
+        teacher2.setActive(true);
         teacherRepository.save(teacher2);
 
         Teacher teacher3 = new Teacher();
-        teacher1.setFirstname("Bob");
-        teacher1.setLastname("Giannoutsos");
-        teacher1.setActive(false);
+        teacher3.setFirstname("Bob");
+        teacher3.setLastname("Giannoutsos");
+        teacher3.setActive(false);
         teacherRepository.save(teacher3);
     }
 }
