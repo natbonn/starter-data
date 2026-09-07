@@ -55,5 +55,7 @@ public class TeacherRunner implements CommandLineRunner {
 //        teacherRepository.save(teacher);           // το hibernate θα κάνει update γιατί το entity είναι managed - dirty checking
 //        teacherRepository.delete(teacher);         // delete του entity - το entity είναι managed
 
+        List<Teacher> teachers = teacherRepository.findActiveByPrefix("Jo");
+        teachers.forEach(System.out::println);
     }
 }

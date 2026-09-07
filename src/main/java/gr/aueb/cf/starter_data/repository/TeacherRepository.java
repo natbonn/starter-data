@@ -29,7 +29,7 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
     long countByActiveTrue();
 
     // Custom query using JPQL to find active teachers by lastname prefix
-    @Query("SELECT t FROM Teacher t WHERE t.lastname LIKE %:prefix% AND t.active = true")
+    @Query("SELECT t FROM Teacher t WHERE t.firstname LIKE %:prefix% AND t.active = true")
     List<Teacher> findActiveByPrefix(@Param("prefix") String prefix);
 
 }
